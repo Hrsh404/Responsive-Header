@@ -1,0 +1,135 @@
+*{padding:0;
+margin:0;
+box-sizing: border-box;
+font-family: "Google Sans Regular";
+}
+
+
+
+body{
+    background: rgb(237, 235, 231);
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background: rgb(39, 34, 34);
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding-right: 100px;
+
+
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(239, 9, 9);
+    font-family: 'Itim', cursive;
+    margin-left: 10px;
+    font-size: 30px;
+    
+    
+    
+}
+
+.hamburger{
+    display: none;
+}
+.nav-bar ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-bar li a {
+    display: block;
+    color: rgb(223, 13, 13);
+    padding: 10px 25px;
+    border-radius: 40px;
+    transition: 2s;
+    margin:  10px; 
+    text-decoration: none;
+    font-size: 22px;
+
+}
+
+
+.nav-bar ul li :hover{
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    transition: 1s;
+    text-decoration: none;
+    
+}
+
+.nav-bar ul li a:hover { 
+ 
+    text-decoration: underline aqua;
+    transition: 0.2s;
+}
+
+
+@media only screen and (max-width: 1320px) {
+    header{
+        padding: 0  50px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header{
+        padding: 0  30px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 2px;
+        background: rgba(12, 234, 12, 0.712);
+        margin: 6px 0
+    }
+
+    .nav-bar {
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: black;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active{
+        height: 450px;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.2s;
+        opacity:0;
+    }
+
+    .nav-bar.active ul{
+        opacity: 1;
+
+    }
+    .nav-bar  ul li a { 
+        margin-bottom: 12px;
+        color: rgba(0, 255, 51, 0.578);
+        font-size: 25px;
+    
+
+    }
+
+}
+
